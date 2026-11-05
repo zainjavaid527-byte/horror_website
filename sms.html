@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="stdms.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+    
+    <!-- Student Form -->
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="number" id="age" placeholder="Age" required>
+      <input type="text" id="grade" placeholder="Grade" required>
+      <button type="submit">Add Student</button>
+    </form>
+    
+    <!-- Student Table -->
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="studentList">
+        <!-- Student rows will be added here -->
+      </tbody>
+    </table>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const studentForm = document.getElementById("studentForm");
+  const studentList = document.getElementById("studentList");
+  let students = [];
+  let editingIndex = -1;
+  // Function to render students to the table
+  function renderStudents() {
+    studentList.innerHTML = "";
+    students.forEach((student, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${student.name}</td>
+        <td>${student.age}</td>
+        <td>${student.grade}</td>
+        <td class="actions">
+          <button class="edit" onclick="editStudent(${index})">Edit</button>
+          <button class="delete" onclick="deleteStudent(${index})">Delete</button>
+        </td>
+      `;
+      studentList.appendChild(row);
+    });
+  }
+
+  // Function to add or update a student
+  studentForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const grade = document.getElementById("grade").value;
+
+    if (editingIndex >= 0) {
+      // Update existing student
+      students[editingIndex] = { name, age, grade };
+      editingIndex = -1;
+    } else {
+      // Add new student
+      students.push({ name, age, grade });
+    }
+
+    studentForm.reset();
+    renderStudents();
+  });
+
+  // Function to edit a student
+  window.editStudent = function(index) {
+    const student = students[index];
+    document.getElementById("name").value = student.name;
+    document.getElementById("age").value = student.age;
+    document.getElementById("grade").value = student.grade;
+    editingIndex = index;
+  };
+
+  // Function to delete a student
+  window.deleteStudent = function(index) {
+    students.splice(index, 1);
+    renderStudents();
+  };
+});
+
+  </script>
+</body>
+</html>

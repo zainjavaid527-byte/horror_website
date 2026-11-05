@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+    position: relative;
+    top: 200px;
+}
+
+button{
+font-size: 52px;
+font-family:monospace;
+border-radius: 10px;
+position: relative;     
+border: 2px solid green;
+overflow: hidden;
+z-index: 1;
+color: green;
+background-color: white;
+
+}
+
+button::before{
+content: "";
+height: 100%;
+width: 100%;
+background-color: red;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+transform: translate(-90%);
+
+
+}
+
+button:hover::before{
+    transform: translate(-0%);
+    transition: ease-out;
+    transition-duration: .5s;
+    transition-timing-function: 0s;
+}

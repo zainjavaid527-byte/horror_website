@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #input1{
+height:30px;
+width:300px;
+margin-top: 15px;
+    }
+    #h{
+        margin-right: 220px;
+        
+        font-size: 24px;
+    text-align: center;
+    position:relative;
+    top:10px;
+    left:50px;
+    }
+    #form{
+        
+        margin-left: 400px;
+        margin-top: 150px;
+        margin-right: px;
+        width:400px;
+        height:350px;
+        background-color:whitesmoke;
+        padding-left: 100px;
+    }
+</style>
+</head>
+<body>
+    <div id="form">
+<h2 id="h">Keyborad Events</h2>
+<label>Onkeydown</label><br>
+<input type="text" id="input1" onkeydown="document.getElementById('form').style.background=this.value"><br><br>
+<label>Onkeyup</label><br>
+<input type="name" id="input1" onkeyup="document.getElementById('form').style.background=this.value"><br><br>
+<label>Onkeypress</label><br>
+<input type="name" id="input1" onkeypress="document.getElementById('form').style.background=this.value">
+    </div>
+</body>
+</html>

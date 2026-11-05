@@ -1,0 +1,28 @@
+<!docttype html>
+<html>
+<head>
+<title>
+Web Page
+</title>
+<style>
+#img1{background-color:black;
+height:200px;
+width:150px;
+border:3px solid yellow;
+border-radius:15px;
+
+box-shadow:5px 5px 5px green;}
+</style>
+</head>
+<body>
+<img src="pic1.gif" id="img1"><br><br>
+<button onclick="bulbon()">On</button>
+<button onclick="bulboff()">Off</button>
+<script>
+function bulbon(){
+document.getElementById("img1").src="pic2.gif";}
+function bulboff(){
+document.getElementById("img1").src="pic1.gif";}
+</script>
+</body>
+</html>

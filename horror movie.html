@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 ul li{
+            display: inline ;
+            padding: 50px;
+            font-size: 25px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+
+
+        }
+
+        .div1 ul li a{
+            text-decoration: none;
+            position: relative;
+            top: 10px;
+            background-image: conic-gradient(red,green,skyblue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 1;
+        }
+
+           
+  
+      
+
+        .div1{
+           background-color: rgb(26, 26, 26);
+            height: 50px;
+
+        }
+        body{
+            background-image: url("E:/web designing/pic2.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .div2{
+            border: 2px solid white;
+            
+            height: 400px;
+            margin: 40px;
+            border-radius: 10px;
+            position: relative;
+            opacity: ;
+            background-image: url("E:/web designing/pic5.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div2::before{
+            content: "";
+            background-color:;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            padding: 10px;
+            border-radius: 10px;
+            background-image: conic-gradient(red,green,skyblue);
+            filter: blur(0.5rem);
+            opacity: 0.5;
+        }
+
+        .div2:hover::before{
+            opacity: 1.5;
+        }
+
+        #h1{
+            color: rgb(88, 90, 92);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            font-size: 40px;
+            margin: 50px;
+
+        }
+
+        #p1{
+            color: aliceblue;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            font-size: 20px;
+            margin: 22px;
+
+        }
+
+        #h12{
+            color: aliceblue;
+            text-align: center;
+            margin: 50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+
+        .div3 ul li{
+            display: inline;
+           
+        }
+
+        .div3 ul li img{
+            width: 180px;
+            border-radius: 10px;
+            position: relative;
+          
+
+        }
+
+       #img1::before{
+            content: "";
+        
+        
+
+        }
+        .img1{
+            padding: 55px;
+            float: left;
+        }
+
+        .img{
+            float: ;
+            position: relative;
+        }
+
+        .img::before{
+            content: "";
+            background-color: red;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+         
+            z-index: -1;
+           border-radius: 10px;
+           padding: 5px;
+           background-image: conic-gradient(red,green,blue);
+           filter: blur(0.5rem);
+           animation-name: ani;
+           animation-duration: 2s;
+           animation-delay: 0s;
+           animation-timing-function: linear;
+           animation-iteration-count: infinite;
+            
+        }
+
+       @keyframes ani{
+        0%{
+            transform: scale(1);
+            opacity: 0;
+
+        }
+        50%{
+            transform: scale(1);
+            opacity: 1.5;
+
+        }
+        100%{
+            transform: scale(1);
+            opacity: 0;
+
+        }
+       }
+
+       #h13{
+            color: aliceblue;
+            text-align: center;
+           
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            position: relative;
+            right: 460px;
+        }
+        #in5{
+            height: 260px;
+        }
+        #in3{
+            height: 260px;
+        }
+
+        #h14{
+            color: aliceblue;
+            text-align: center;
+           
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            position: relative;
+            right: px;
+        }
+
+        #h15{
+            color: aliceblue;
+            text-align: center;
+           
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            position: relative;
+            right: px;
+        }
+      
+      
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#h12">English Horror</a></li>
+            <li><a href="#h13">Indian Horror</a></li>
+            <li><a href="#h14">korean Horror</a></li>
+            <li><a href="#h15">Turkish Horror</a></li>
+        </ul>
+    </div>
+
+    <div class="div2">
+        <h1 id="h1">Based On Reality</h1>
+        <p id="p1">Very amazing facts۔
+            If anyone sees him alone,<br> they swill definitely  be scared.
+            People who<br> are afraid should not see this.
+            There is almost <br>70% truth in these stories.
+            This film is based<br> on reality.</p>
+    </div>
+    
+    <div class="div3">
+
+        <h1 id="h12">English Horror Movies</h1>
+        <ul id="ull">
+            <li><div class="img1"><div class="img"><img src="hr1.jpeg" id="img1"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="hr2.jpeg"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="hr3.webp"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="hr10.jpeg"></div></div></li>
+        </ul>
+
+
+    </div>
+
+
+    <div class="div3">
+
+        <h1 id="h13">Indian Horror Movies</h1>
+        <ul>
+            <li><div class="img1"><div class="img"><img src="in1.jpg" id="img1"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="in4.jpg"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="in5.jpeg" id="in5"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="in3.jpg" id="in3"></div></div></li>
+        </ul>
+
+
+    </div>
+
+    <div class="div3">
+
+        <h1 id="h14">Korean Horror Movies</h1>
+        <ul>
+            <li><div class="img1"><div class="img"><img src="ko1.jpeg" id="img1"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="ko4.jpeg"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="ko2.jpeg" id="in5"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="ko3.jpg" id="in3"></div></div></li>
+        </ul>
+
+
+    </div>
+
+    
+    <div class="div3">
+
+        <h1 id="h15">Turkish Horror Movies</h1>
+        <ul>
+            <li><div class="img1"><div class="img"><img src="s1.jpg" id="img1"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="s4.jpeg"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="s2.jpeg" id="in5"></div></div></li>
+            <li><div class="img1"><div class="img"><img src="s3.jpeg" id="in3"></div></div></li>
+        </ul>
+
+
+    </div>
+
+
+
+
+</body>
+</html>

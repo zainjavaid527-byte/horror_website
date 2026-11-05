@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .div1{
+            border: 2px solid black;
+            width: 350px;
+            padding: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 430px;
+            margin-top: 60px;
+            border-radius: 10px;
+            background-color: rgb(36, 33, 33);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .div1::before{
+            content: "";
+            background-color:;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            padding: 10px;
+            border-radius: 10px;
+            background-image: conic-gradient(red,green,skyblue);
+            filter: blur(0.5rem);
+            opacity: 0.5;
+            
+            animation-name: ani;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes ani{
+            0%{
+                transform:sclae(1);
+                opacity: 0;
+                filter: blur(0.5rem);
+            }
+            50%{
+                transform:sclae(1.5);
+                opacity: 1.5;
+                filter: blur(1.5rem);
+
+            }
+            100%{
+                transform:sclae(1);
+                opacity: 0;
+                filter: blur(0.5rem);
+            }
+        }
+        h1{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>Gradeint Border</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, 
+            libero commodi officiis enim earum blanditiis quasi deserunt eius 
+            quia adipisci quos excepturi cumque in voluptatum totam, dolor veritatis 
+            quibusdam rem dolorem accusamus at ab eveniet! Quidem maiores 
+            tempora, error deserunt vel at rem ipsa excepturi, commodi eaque omnis,
+            adipisci doloribus repellat ad incidunt tempore nulla natus illum? Nemo voluptates
+            aperiam incidunt magnam repudiandae dolorum quasi. Dolorem, temporibus impedit eos 
+            eligendi distinctio doloribus aut iste molestias, accusamus illo autem! Reprehenderit, 
+            sunt minima. Dolorem voluptatibus magnam excepturi eveniet aspernatur sed,
+            obcaecati natus modi facere incidunt id. Ab officiis rerum commodi qui sapiente!</p>
+    </div>
+</body>
+</html>
